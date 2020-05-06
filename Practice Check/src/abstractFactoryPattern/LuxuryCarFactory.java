@@ -1,23 +1,12 @@
 package abstractFactoryPattern;
+public class LuxuryCarFactory implements AbstractCarFactory {
 
-public class LuxuryCarFactory implements CarFactory {
-
+	private Location location;
+	public LuxuryCarFactory(Location location) {
+		this.location=location;
+	}
 	@Override
-	public Car getCar(String loc) {
-		Location location;
-		switch (loc) {
-		case "USA": {
-			location = Location.USA;
-			break;
-		}
-		case "INDIA": {
-			location = Location.INDIA;
-			break;
-		}
-		default: {
-			location = Location.DEFAULT;
-		}
-		}
+	public Car constructCar() {
 		return new LuxuryCar(location);
 	}
 

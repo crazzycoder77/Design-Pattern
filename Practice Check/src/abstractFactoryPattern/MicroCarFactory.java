@@ -1,23 +1,13 @@
 package abstractFactoryPattern;
+public class MicroCarFactory implements AbstractCarFactory {
 
-public class MicroCarFactory implements CarFactory{
-
+	private Location location;
+	public MicroCarFactory(Location location) {
+		this.location=location;
+	}
+	
 	@Override
-	public Car getCar(String loc) {
-		Location location;
-		switch (loc) {
-		case "USA": {
-			location = Location.USA;
-			break;
-		}
-		case "INDIA": {
-			location = Location.INDIA;
-			break;
-		}
-		default: {
-			location = Location.DEFAULT;
-		}
-		}
+	public Car constructCar() {
 		return new MicroCar(location);
 	}
 

@@ -1,36 +1,37 @@
 package abstractFactoryPattern;
 
 public abstract class Car {
-	protected CarType model;
-	protected Location location;
+	
+	CarType model = null;
+	Location location = null;
 
-	public Car(CarType model, Location location) {
-		super();
+	Car(CarType model, Location location) {
 		this.model = model;
 		this.location = location;
 	}
-
-	public abstract void construct();
-
-	public CarType getMoodel() {
+	
+	abstract void construct();
+	
+	CarType getModel() {
 		return model;
 	}
-
-	public void setMoodel(CarType model) {
+	
+	void setModel(CarType model) {
 		this.model = model;
 	}
-
-	public Location getLocation() {
+	
+	Location getLocation() {
 		return location;
 	}
-
-	public void setLocation(Location location) {
+	
+	void setLocation(Location location) {
 		this.location = location;
 	}
 
 	@Override
 	public String toString() {
-		return "CarModel - " + model + " located in " + location;
+		return "Car [model=" + model + ", location=" + location + "]";
 	}
-
+	
+	
 }
