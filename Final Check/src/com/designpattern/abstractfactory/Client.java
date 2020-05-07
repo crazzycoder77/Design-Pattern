@@ -19,7 +19,7 @@ public class Client {
 		order2.processOrder();
 		order3.processOrder();
 
-		System.out.println();
+		System.out.println("-------------------------------------------------------------------");
 
 		order4.processOrder();
 		order5.processOrder();

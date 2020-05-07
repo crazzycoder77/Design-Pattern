@@ -7,9 +7,9 @@ public class App {
 		INotificationService service = new NotificationService();
 
 		// Instantiating Admins
-		INotificationObserver admin1 = new Admin(service, "Akash", 102);
-		INotificationObserver admin2 = new Admin(service, "Samir", 110);
-		INotificationObserver admin3 = new Admin(service, "Aadityash", 98);
+		INotificationObserver admin1 = new Admin(service, "Foo", 101);
+		INotificationObserver admin2 = new Admin(service, "Faa", 110);
+		INotificationObserver admin3 = new Admin(service, "Boo", 98);
 
 		// Admin Subscribing Service
 		service.addObserver(admin1);
